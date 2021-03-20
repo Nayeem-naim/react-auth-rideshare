@@ -15,7 +15,7 @@ const LogIn = () => {
     const location = useLocation()
     let { from } = location.state || { from: { pathname: "/" } };
     const [newUser, setNewUser] = useState(false)
-    const [ setUser] = useState({
+    const [user, setUser] = useState({
         email: '',
         password: '',
         name: '',
