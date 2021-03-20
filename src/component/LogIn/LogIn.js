@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 
 
 const LogIn = () => {
-    const  [setLoggedInUser] = useContext(UserContext)
+    const  [loggedInUser, setLoggedInUser] = useContext(UserContext)
     const history = useHistory()
     const location = useLocation()
     let { from } = location.state || { from: { pathname: "/" } };
@@ -37,7 +37,7 @@ const LogIn = () => {
                 history.replace(from);
             }).catch((error) => {
                
-                
+
             });
     }
     const handleSubmit = (e) => {
@@ -109,7 +109,6 @@ const LogIn = () => {
                 <br /><br />
                 <input type="text" onBlur={handleBlur} name="email" placeholder='your email' required /><br /><br />
                 <input type="password" onBlur={handleBlur} name="password" placeholder="your password" required /><br /><br />
-                <input type="password" onBlur={handleBlur} name="conformPassword" placeholder="your password"/><br /><br />
                 <input className="btn-success" type="submit" value={newUser ? 'Create an account' : 'Login'}/><br/><br/>
                <br/><br/>
                <p>{ newUser ? 'Already have an account ?' : 'Don not have an account ?'} <Link onClick={()=> setNewUser(!newUser)}> {newUser ? 'LogIn' : 'Create an account'}</Link> </p>
