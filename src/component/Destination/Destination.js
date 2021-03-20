@@ -16,7 +16,7 @@ const Destination = () => {
     var mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
 
     mapboxgl.accessToken = 'pk.eyJ1IjoibmF5ZWVtOTUiLCJhIjoiY2ttaGt5bDQ1MDhlcTJ2a2Q4ajZ2eGhnbSJ9.npTlQC13WpFhurIhM6USww';
-    var map = new mapboxgl.Map({
+     new mapboxgl.Map({
       container: 'map-id',
       style: 'mapbox://styles/mapbox/streets-v11'
     });

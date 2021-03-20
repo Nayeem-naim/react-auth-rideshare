@@ -1,9 +1,8 @@
-import React, { useContext } from 'react';
+import React,  from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './NavBar.css'
-import { UserContext } from '../../App';
 
 const NavBar = () => {
     return (

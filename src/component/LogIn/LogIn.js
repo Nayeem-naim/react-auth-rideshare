@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import firebase from "firebase/app";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "firebase/auth";
@@ -10,12 +10,12 @@ import { Link } from 'react-router-dom';
 
 
 const LogIn = () => {
-    const  [loggedInUser, setLoggedInUser] = useContext(UserContext)
+    const  [setLoggedInUser] = useContext(UserContext)
     const history = useHistory()
     const location = useLocation()
     let { from } = location.state || { from: { pathname: "/" } };
     const [newUser, setNewUser] = useState(false)
-    const [user, setUser] = useState({
+    const [ setUser] = useState({
         email: '',
         password: '',
         name: '',
@@ -36,9 +36,7 @@ const LogIn = () => {
                 setLoggedInUser(signInUser)
                 history.replace(from);
             }).catch((error) => {
-                var errorMessage = error.message;
-                var email = error.email;
-                console.log(error.message);
+               
             });
     }
     const handleSubmit = (e) => {
