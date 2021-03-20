@@ -32,11 +32,12 @@ const LogIn = () => {
             .then((res ) => {
                 const {email,password} =  res.user;
                 const signInUser = {email,password}
-                var user = res.user;
+                // res.user;
                 setLoggedInUser(signInUser)
                 history.replace(from);
             }).catch((error) => {
                
+                
             });
     }
     const handleSubmit = (e) => {
