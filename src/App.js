@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { createContext, useState } from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -7,29 +7,36 @@ import {
 } from "react-router-dom"
 import Home from './component/Home/Home';
 import LogIn from './component/LogIn/LogIn';
-import About from './component/About/About';
+import NavBar from "./component/NavBar/NavBar";
+import Destination from "./component/Destination/Destination";
+import PrivateRoute from "./component/PrivateRoute/PrivateRoute";
 
+export const UserContext = createContext()
 
 function App() {
+  const [loggedInUser, setLoggedInUser] = useState({})
+
   return (
     <div>
+      <UserContext.Provider value={[loggedInUser,setLoggedInUser]}>
       <Router>
-      <Home/>
+     <NavBar/>
         <Switch>
-        
           <Route exact path="/">
             <Home/>
           </Route>
-          <Route path="/about">
-           <About/>
+          <Route path="/home">
+              <Home/>
           </Route>
+          <PrivateRoute path="/destination">
+           <Destination/>
+          </PrivateRoute>
           <Route path="/login">
           <LogIn/>
           </Route>
         </Switch>
       </Router>
-      
- 
+      </UserContext.Provider>
     </div>
   );
 }

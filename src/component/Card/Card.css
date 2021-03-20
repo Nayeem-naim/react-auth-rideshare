@@ -1,0 +1,14 @@
+.card-style{
+    color: black;
+    width: 200px;
+    height: 300px;
+    width: 80%;
+    border-radius: 10px;
+}
+#Card-Img{
+    border-radius: 10px;
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    margin-left: 25px;
+}

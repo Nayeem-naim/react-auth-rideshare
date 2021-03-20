@@ -1,18 +1,18 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import fakeData from '../../FakeData/FakeData.json'
+import './home.css'
+import Cards from '../Card/Cards'
 
 const Home = () => {
+    const [ride, setRide ] = useState([])
+    useEffect(()=>{
+       setRide(fakeData)
+    },[])
     return (
-        <div style={{textAlign:"center"}}>
-            <nav>
-                <ul>
-
-                         <Link to="/home">Home</Link><br/>
-                        <Link to="/about">About</Link><br/>
-                        <Link to="/login">Login</Link>
-            
-                </ul>
-            </nav>
+        <div className="row home-style" >
+            {
+                ride.map(rd => <Cards card={rd}> </Cards>)
+            }
         </div>
     );
 };

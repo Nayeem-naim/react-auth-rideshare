@@ -1,0 +1,12 @@
+.cart-container {
+    display: flex;
+}
+
+.cart-body {
+    width: 30%;
+    margin: 30px;
+}
+.home-style{
+    background-color: indianred;
+    height: 500px;
+}
