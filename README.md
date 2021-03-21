@@ -8,10 +8,7 @@ ses hoao jano ses holo na
 
 
 ### map 
-map nia onek kata katni korar pore map dekaite parci page kinto apne sorasori map dekte parben na apnake button a click kore map dekte hobe.bolte paren ata o akta try cilo je kamon kore map ta hide kore raka jai dei how korano jai.
+map nia onek kata katni korar pore map dekaite parci page kinto apne sorasori map dekte parben na apnake button a click kore map dekte hobe.bolte paren ata o akta try cilo je kamon kore map ta hide kore raka jai and click korle show korbe.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Live link : [https://my-work-firebase.web.app](https://my-work-firebase.web.app)

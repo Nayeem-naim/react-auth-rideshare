@@ -11,3 +11,10 @@
     font-size: 30px;
     color:red !important;
 }
+.brand{
+    color: springgreen;
+    font-size: 30px;
+}
+.navItem{
+    margin-top: -30px;
+}

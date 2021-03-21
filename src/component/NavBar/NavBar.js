@@ -1,5 +1,5 @@
 import React from 'react';
-import{ Nav } from 'react-bootstrap';
+import{ Nav,Navbar } from 'react-bootstrap';
 import  {Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './NavBar.css'
@@ -7,7 +7,8 @@ import './NavBar.css'
 const NavBar = () => {
     return (
         <div className="container link-style">
-            <Nav className="justify-content-end" activeKey="/home">
+             <Navbar.Brand className=" brand" as={Link} to="/home">BD RIDE SHARE</Navbar.Brand>
+            <Nav className="justify-content-end navItem" activeKey="/home">
                 <Nav.Item>
                     <Nav.Link as={Link} to="/home">Home</Nav.Link>
                 </Nav.Item>
