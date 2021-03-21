@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 
 
 const LogIn = () => {
-    const  [loggedInUser, setLoggedInUser] = useContext(UserContext)
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext)
     const history = useHistory()
     const location = useLocation()
     let { from } = location.state || { from: { pathname: "/" } };
@@ -29,55 +29,56 @@ const LogIn = () => {
         var provider = new firebase.auth.GoogleAuthProvider();
         firebase.auth()
             .signInWithPopup(provider)
-            .then((res ) => {
-                const {email,password} =  res.user;
-                const signInUser = {email,password}
-                // res.user;
+            .then((res) => {
+                const { email, password } = res.user;
+                const signInUser = { email, password }
                 setLoggedInUser(signInUser)
                 history.replace(from);
             }).catch((error) => {
-               
+
 
             });
     }
+   
     const handleSubmit = (e) => {
+
         if (newUser && user.email && user.password) {
             firebase.auth().createUserWithEmailAndPassword(user.email, user.password)
-            .then(res => {
-             const {email,password} =  res.user;
-             const signInUser = {email,password}
-             const newUserInfo = {...user}
-             newUserInfo.error = '';
-             newUserInfo.success = true;
-             setUser(newUserInfo)
-             setLoggedInUser(signInUser)
-             history.replace(from);
-            })
-            .catch( error => {
-            const newUserInfo = {...user}
-            newUserInfo.error = error.message;
-            newUserInfo.success = false;
-            setUser(newUserInfo);
-            });
+                .then(res => {
+                    const { email, password } = res.user;
+                    const signInUser = { email, password }
+                    const newUserInfo = { ...user }
+                    newUserInfo.error = '';
+                    newUserInfo.success = true;
+                    setUser(newUserInfo)
+                    setLoggedInUser(signInUser)
+                    history.replace(from);
+                })
+                .catch(error => {
+                    const newUserInfo = { ...user }
+                    newUserInfo.error = error.message;
+                    newUserInfo.success = false;
+                    setUser(newUserInfo);
+                });
         }
         if (!newUser && user.email && user.password) {
             firebase.auth().signInWithEmailAndPassword(user.email, user.password)
-            .then(res => {
-                const {email,password} =  res.user;
-                const signInUser = {email,password}
-              const newUserInfo = {...user}
-              newUserInfo.error = '';
-              newUserInfo.success = true;
-              setUser(newUserInfo)
-              setLoggedInUser(signInUser)
-             history.replace(from);
-            })
-            .catch(error =>  {
-              const newUserInfo = {...user}
-              newUserInfo.error = error.message;
-              newUserInfo.success = false;
-              setUser(newUserInfo);
-            });
+                .then(res => {
+                    const { email, password } = res.user;
+                    const signInUser = { email, password }
+                    const newUserInfo = { ...user }
+                    newUserInfo.error = '';
+                    newUserInfo.success = true;
+                    setUser(newUserInfo)
+                    setLoggedInUser(signInUser)
+                    history.replace(from);
+                })
+                .catch(error => {
+                    const newUserInfo = { ...user }
+                    newUserInfo.error = error.message;
+                    newUserInfo.success = false;
+                    setUser(newUserInfo);
+                });
         }
         e.preventDefault()
     }
@@ -103,20 +104,21 @@ const LogIn = () => {
             {
                 <p className="name-style">{user.name}</p>
             }
-            <form onSubmit={handleSubmit} className="form-style">
-              <h1>{newUser ? 'Create an account' : 'LogIn'}</h1><br/>
-               { newUser && <input name="name" onBlur={handleBlur} type="text" placeholder="Your name" />}
+            <form onSubmit={handleSubmit} className="align-self-center mr-3 form-style">
+                <h1>{newUser ? 'Create an account' : 'LogIn'}</h1><br />
+                {newUser && <input name="name" onBlur={handleBlur} type="text" placeholder="Your name" />}
                 <br /><br />
                 <input type="text" onBlur={handleBlur} name="email" placeholder='your email' required /><br /><br />
                 <input type="password" onBlur={handleBlur} name="password" placeholder="your password" required /><br /><br />
-                <input className="btn-success" type="submit" value={newUser ? 'Create an account' : 'Login'}/><br/><br/>
-               <br/><br/>
-               <p>{ newUser ? 'Already have an account ?' : 'Don not have an account ?'} <Link onClick={()=> setNewUser(!newUser)}> {newUser ? 'LogIn' : 'Create an account'}</Link> </p>
-            </form><br/>
-            <hr/>
+
+                <input className="btn-success" type="submit" value={newUser ? 'Create an account' : 'Login'} /><br /><br />
+                <br /><br />
+                <p>{newUser ? 'Already have an account ?' : 'Don not have an account ?'} <Link onClick={() => setNewUser(!newUser)}> {newUser ? 'LogIn' : 'Create an account'}</Link> </p>
+            </form><br />
+            <hr />
             <h2>or</h2>
             <button onClick={handleSignInGoogle}>SignInGoogle</button>
-            <p style={{color:'red'}}>{user.error}</p>
+            <p style={{ color: 'red' }}>{user.error}</p>
         </div>
     );
 };

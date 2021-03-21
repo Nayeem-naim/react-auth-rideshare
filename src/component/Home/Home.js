@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import fakeData from '../../FakeData/FakeData.json'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './home.css'
 import Cards from '../Card/Cards'
 
@@ -9,7 +10,7 @@ const Home = () => {
        setRide(fakeData)
     },[])
     return (
-        <div className="row home-style" >
+        <div className="row justify-content-center home-style " >
             {
                 ride.map(rd => <Cards card={rd}> </Cards>)
             }

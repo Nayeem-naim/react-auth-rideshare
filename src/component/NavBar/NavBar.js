@@ -1,22 +1,29 @@
-import React  from 'react';
-import { Nav, Navbar } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import{ Nav } from 'react-bootstrap';
+import  {Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './NavBar.css'
 
 const NavBar = () => {
     return (
-        <div>
-            <Navbar className="container justify-content-end " activeKey="/home">
-                <Nav>
-                <Navbar.Brand className="brand-style">Bangladesh Ride Share</Navbar.Brand>
-                <Link className="link-style " to="/home">Home</Link>
-                <Link className="link-style " to="/destination">Destination</Link>
-                <Link className="link-style " to="/blog">Blog</Link>
-                <Link className="link-style " to="/contact">Contact</Link>
-                <Link className="link-style " to="/login">Login</Link>
-                </Nav>
-            </Navbar>
+        <div className="container link-style">
+            <Nav className="justify-content-end" activeKey="/home">
+                <Nav.Item>
+                    <Nav.Link as={Link} to="/home">Home</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                    <Nav.Link as={Link} to="/destination">Destination</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                    <Nav.Link as={Link} to="/blog">Blog</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                    <Nav.Link as={Link} to="/contact">Contact </Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                    <Nav.Link as={Link} to="/login">Login</Nav.Link>
+                </Nav.Item>
+            </Nav>
         </div>
     );
 };

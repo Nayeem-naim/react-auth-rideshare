@@ -6,7 +6,8 @@ import fakeData from '../../FakeData/FakeData.json'
 <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
 
 
-const Destination = () => {
+const Destination = (props) => {
+  console.log(props)
   const [img ,setImg] = useState([])
   useEffect(()=>{
      setImg(fakeData)
@@ -26,14 +27,13 @@ const Destination = () => {
         <div className="container"  style={{ textAlign: "center" }}>
 
             <Row >
-                <Col xs={6} md={4} className="colum-style">
+                <Col xs={6} md={4} className="justify-content-center colum-style">
                     <h4>Pik From</h4>
                     <input type="text"/><br/><br/>
                     <h4>Pik to</h4>
                     <input type="text"/><br/><br/>
                     <input type="datetime" name="datetime" id="" placeholder="date and time "/><br/><br/>
                     <input id="button" type="button" value="search"/>
-
                     <img src={img} alt=""/>
                </Col>
                 <Col  xs={12} md={8} id='map-id'>

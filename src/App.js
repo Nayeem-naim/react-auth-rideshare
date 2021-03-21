@@ -10,6 +10,7 @@ import LogIn from './component/LogIn/LogIn';
 import NavBar from "./component/NavBar/NavBar";
 import Destination from "./component/Destination/Destination";
 import PrivateRoute from "./component/PrivateRoute/PrivateRoute";
+import NotFound from "./component/NotFound/NotFound"
 
 export const UserContext = createContext()
 
@@ -26,13 +27,16 @@ function App() {
             <Home/>
           </Route>
           <Route path="/home">
-              <Home/>
+            <Home/>
           </Route>
           <PrivateRoute path="/destination">
            <Destination/>
           </PrivateRoute>
           <Route path="/login">
           <LogIn/>
+          </Route>
+          <Route path="/*">
+            <NotFound></NotFound>
           </Route>
         </Switch>
       </Router>

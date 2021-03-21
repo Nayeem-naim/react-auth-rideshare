@@ -3,11 +3,12 @@
     width: 200px;
     height: 300px;
     width: 80%;
+    margin-bottom: 50px;
     border-radius: 10px;
 }
 #Card-Img{
     border-radius: 10px;
-    width: 200px;
+    width: 70%;
     height: 200px;
     padding: 10px;
     margin-left: 25px;
