@@ -1,0 +1,107 @@
+[debug] [2021-03-21T16:35:43.225Z] ----------------------------------------------------------------------
+[debug] [2021-03-21T16:35:43.236Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\MD Nayeem Islam\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2021-03-21T16:35:43.237Z] CLI Version:   9.6.1
+[debug] [2021-03-21T16:35:43.237Z] Platform:      win32
+[debug] [2021-03-21T16:35:43.237Z] Node Version:  v14.15.3
+[debug] [2021-03-21T16:35:43.609Z] Time:          Sun Mar 21 2021 22:35:43 GMT+0600 (Bangladesh Standard Time)
+[debug] [2021-03-21T16:35:43.610Z] ----------------------------------------------------------------------
+[debug] [2021-03-21T16:35:43.610Z] 
+[debug] [2021-03-21T16:35:43.698Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-03-21T16:35:43.699Z] > authorizing via signed-in user
+[debug] [2021-03-21T16:35:43.699Z] [iam] checking project my-work-firebase for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-03-21T16:35:43.729Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/my-work-firebase:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-03-21T16:35:45.538Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 21 Mar 2021 16:35:46 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1145","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-21T16:35:45.541Z] > refreshing access token with scopes: []
+[debug] [2021-03-21T16:35:45.541Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-03-21T16:35:45.823Z] <<< HTTP RESPONSE 200 {"date":"Sun, 21 Mar 2021 16:35:47 GMT","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-21T16:35:45.895Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/my-work-firebase [none]
+[debug] [2021-03-21T16:35:46.726Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/my-work-firebase 200
+[debug] [2021-03-21T16:35:46.726Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/my-work-firebase {"projectId":"my-work-firebase","projectNumber":"401962779936","displayName":"my-work-firebase","name":"projects/my-work-firebase","resources":{"hostingSite":"my-work-firebase"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'my-work-firebase'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2021-03-21T16:35:46.741Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-03-21T16:35:46.741Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-03-21T16:35:47.085Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","date":"Sun, 21 Mar 2021 16:35:48 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-21T16:35:47.166Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/my-work-firebase/versions  
+ {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2021-03-21T16:35:50.135Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 21 Mar 2021 16:35:51 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting[my-work-firebase]: beginning deploy... 
+[info] i  hosting[my-work-firebase]: found 20 files in build 
+[debug] [2021-03-21T16:35:51.377Z] > refreshing access token with scopes: []
+[debug] [2021-03-21T16:35:51.377Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-03-21T16:35:51.380Z] [hosting] hash cache [YnVpbGQ] stored for 20 files
+[debug] [2021-03-21T16:35:51.381Z] [hosting][hash queue][FINAL] {"max":1114,"min":5,"avg":191.85,"active":0,"complete":20,"success":20,"errored":0,"retried":0,"total":20,"elapsed":1142}
+[debug] [2021-03-21T16:35:51.649Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","date":"Sun, 21 Mar 2021 16:35:53 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-21T16:35:51.710Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/sites/my-work-firebase/versions/2960bea0a2f34516:populateFiles [none]
+[debug] [2021-03-21T16:35:51.711Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/sites/my-work-firebase/versions/2960bea0a2f34516:populateFiles {"files":{"/favicon.ico":"eae62e993eb980ec8a25058c39d5a51feab118bd2100c4deebb2a9c158ec11f9","/logo192.png":"3ee59515172ee198f3be375979df15ac5345183e656720a381b8872b2a39dc8b","/logo512.png":"ee7e2f3fdb8209c4b6fd7bef6ba50d1b9dba30a25bb5c3126df057e1cb6f5331","/manifest.json":"aff3449bdc238776f5d6d967f19ec491b36aed5fb7f23ccff6500736fd58494a","/robots.txt":"bfe106a3fb878dc83461c86818bf74fc1bdc7f28538ba613cd3e775516ce8b49","/static/css/main.eab8f627.chunk.css.map":"e6d787a8ab6c9a1914489c301239a5643cc8815a9d82735256e3f8e5ffca9d03","/index.html":"a8a7b33df3796bfae967502d44a5c2d64388a22eb356fc42a823b68efd979917","/static/js/2.39054c94.chunk.js.LICENSE.txt":"9f48a3eb7bbaa3f6b259434cd293cd6aed67d32b619101451c9a1b701d635936","/asset-manifest.json":"53221136f3e969a70f8e67bd1b9151b05b0008b7ec508a64f51801344b7d9e00","/static/css/main.eab8f627.chunk.css":"28f2a65e9abaa7b10c45861dd9c6fd9561c8476d28d3cd62a9582a859e019fc9","/static/js/3.7c098aa9.chunk.js.map":"4f0e9faaf4c8248aa7a9fb0b792903a026a04d2757a5ed675b1fc7878c082260","/static/js/main.dab39b5a.chunk.js":"0f0fefc7fa9fdf3fdb267e1161f755e200753437cc76024b63efb16470d66575","/static/js/main.dab39b5a.chunk.js.map":"aed885e41e37474a5a39d20a8fbdccadbd241f0f08533eaaa02409cbafb2b459","/static/js/runtime-main.8c153805.js":"136ca16e1116704a6b07a36f5c2e432d215fd01f003ff0deadbc837cd7df6aa9","/static/js/3.7c098aa9.chunk.js":"f1267403bfefd81bbe49ad0509b2702c1102575a0feba28b74c1521923d17cb0","/static/js/runtime-main.8c153805.js.map":"a907137f8750c29a65bc38e5ad67acdf043a5b7e1e61822db514a28203a0580f","/static/css/2.4c97ca4f.chunk.css":"7e6538a6f0fc738a788c03a9cee1861c42fe2f29017e5026cb867636b24dcf77","/static/css/2.4c97ca4f.chunk.css.map":"a70eaab29a7c2121a70e08850c01f71611bdc0c137e6a4b349704641c33af035","/static/js/2.39054c94.chunk.js":"4bb2a46e062f1e246e8809d2100c4a93098423bf08fc9de63f813b682ccdf107","/static/js/2.39054c94.chunk.js.map":"8e2bcc3079cd5b3696e2219d4abd6f52eeac3d00fd178893fbeb54f2af833061"}}
+[debug] [2021-03-21T16:35:53.361Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/sites/my-work-firebase/versions/2960bea0a2f34516:populateFiles 200
+[debug] [2021-03-21T16:35:53.361Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/sites/my-work-firebase/versions/2960bea0a2f34516:populateFiles {"uploadRequiredHashes":["aed885e41e37474a5a39d20a8fbdccadbd241f0f08533eaaa02409cbafb2b459","53221136f3e969a70f8e67bd1b9151b05b0008b7ec508a64f51801344b7d9e00","a8a7b33df3796bfae967502d44a5c2d64388a22eb356fc42a823b68efd979917","0f0fefc7fa9fdf3fdb267e1161f755e200753437cc76024b63efb16470d66575"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/my-work-firebase/versions/2960bea0a2f34516/files"}
+[debug] [2021-03-21T16:35:53.363Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/my-work-firebase/versions/2960bea0a2f34516/files/aed885e41e37474a5a39d20a8fbdccadbd241f0f08533eaaa02409cbafb2b459 [none]
+[debug] [2021-03-21T16:35:53.363Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/my-work-firebase/versions/2960bea0a2f34516/files/aed885e41e37474a5a39d20a8fbdccadbd241f0f08533eaaa02409cbafb2b459 [stream]
+[debug] [2021-03-21T16:35:53.365Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/my-work-firebase/versions/2960bea0a2f34516/files/53221136f3e969a70f8e67bd1b9151b05b0008b7ec508a64f51801344b7d9e00 [none]
+[debug] [2021-03-21T16:35:53.365Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/my-work-firebase/versions/2960bea0a2f34516/files/53221136f3e969a70f8e67bd1b9151b05b0008b7ec508a64f51801344b7d9e00 [stream]
+[debug] [2021-03-21T16:35:53.367Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/my-work-firebase/versions/2960bea0a2f34516/files/a8a7b33df3796bfae967502d44a5c2d64388a22eb356fc42a823b68efd979917 [none]
+[debug] [2021-03-21T16:35:53.367Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/my-work-firebase/versions/2960bea0a2f34516/files/a8a7b33df3796bfae967502d44a5c2d64388a22eb356fc42a823b68efd979917 [stream]
+[debug] [2021-03-21T16:35:53.369Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/my-work-firebase/versions/2960bea0a2f34516/files/0f0fefc7fa9fdf3fdb267e1161f755e200753437cc76024b63efb16470d66575 [none]
+[debug] [2021-03-21T16:35:53.369Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/my-work-firebase/versions/2960bea0a2f34516/files/0f0fefc7fa9fdf3fdb267e1161f755e200753437cc76024b63efb16470d66575 [stream]
+[debug] [2021-03-21T16:35:53.370Z] [hosting][populate queue][FINAL] {"max":1986,"min":1986,"avg":1986,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1993}
+[debug] [2021-03-21T16:35:53.371Z] [hosting] uploads queued: 4
+[debug] [2021-03-21T16:35:57.957Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/my-work-firebase/versions/2960bea0a2f34516/files/0f0fefc7fa9fdf3fdb267e1161f755e200753437cc76024b63efb16470d66575 200
+[debug] [2021-03-21T16:35:57.957Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/my-work-firebase/versions/2960bea0a2f34516/files/0f0fefc7fa9fdf3fdb267e1161f755e200753437cc76024b63efb16470d66575 [stream]
+[debug] [2021-03-21T16:35:58.016Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/my-work-firebase/versions/2960bea0a2f34516/files/53221136f3e969a70f8e67bd1b9151b05b0008b7ec508a64f51801344b7d9e00 200
+[debug] [2021-03-21T16:35:58.016Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/my-work-firebase/versions/2960bea0a2f34516/files/53221136f3e969a70f8e67bd1b9151b05b0008b7ec508a64f51801344b7d9e00 [stream]
+[debug] [2021-03-21T16:35:58.025Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/my-work-firebase/versions/2960bea0a2f34516/files/aed885e41e37474a5a39d20a8fbdccadbd241f0f08533eaaa02409cbafb2b459 200
+[debug] [2021-03-21T16:35:58.025Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/my-work-firebase/versions/2960bea0a2f34516/files/aed885e41e37474a5a39d20a8fbdccadbd241f0f08533eaaa02409cbafb2b459 [stream]
+[debug] [2021-03-21T16:35:58.056Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/my-work-firebase/versions/2960bea0a2f34516/files/a8a7b33df3796bfae967502d44a5c2d64388a22eb356fc42a823b68efd979917 200
+[debug] [2021-03-21T16:35:58.056Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/my-work-firebase/versions/2960bea0a2f34516/files/a8a7b33df3796bfae967502d44a5c2d64388a22eb356fc42a823b68efd979917 [stream]
+[debug] [2021-03-21T16:35:58.056Z] [hosting][upload queue][FINAL] {"max":4693,"min":4594,"avg":4651.25,"active":0,"complete":4,"success":4,"errored":0,"retried":0,"total":4,"elapsed":4695}
+[info] +  hosting[my-work-firebase]: file upload complete 
+[debug] [2021-03-21T16:35:58.058Z] [hosting] deploy completed after 7921ms
+[debug] [2021-03-21T16:35:59.555Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "my-work-firebase"
+    },
+    "site": "my-work-firebase",
+    "version": "sites/my-work-firebase/versions/2960bea0a2f34516"
+  }
+]
+[info] i  hosting[my-work-firebase]: finalizing version... 
+[debug] [2021-03-21T16:35:59.557Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-03-21T16:35:59.558Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-03-21T16:35:59.831Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","date":"Sun, 21 Mar 2021 16:36:01 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-21T16:36:01.246Z] >>> HTTP REQUEST PATCH https://firebasehosting.googleapis.com/v1beta1/sites/my-work-firebase/versions/2960bea0a2f34516?updateMask=status  
+ {"status":"FINALIZED"}
+[debug] [2021-03-21T16:36:02.890Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 21 Mar 2021 16:36:04 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-21T16:36:02.891Z] [hosting] finalized version for my-work-firebase: {"name":"sites/my-work-firebase/versions/2960bea0a2f34516","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2021-03-21T16:35:51.339703Z","createUser":{"email":"mdnaimislam405@gmail.com"},"finalizeTime":"2021-03-21T16:36:04.271218Z","finalizeUser":{"email":"mdnaimislam405@gmail.com"}}
+[info] +  hosting[my-work-firebase]: version finalized 
+[info] i  hosting[my-work-firebase]: releasing new version... 
+[debug] [2021-03-21T16:36:02.893Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/my-work-firebase/releases?version_name=sites/my-work-firebase/versions/2960bea0a2f34516  
+ {"message":null}
+[debug] [2021-03-21T16:36:05.194Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 21 Mar 2021 16:36:06 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-21T16:36:05.194Z] [hosting] release: {"name":"sites/my-work-firebase/releases/1616344565468962","version":{"name":"sites/my-work-firebase/versions/2960bea0a2f34516","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2021-03-21T16:35:51.339703Z","createUser":{"email":"mdnaimislam405@gmail.com"},"finalizeTime":"2021-03-21T16:36:04.271218Z","finalizeUser":{"email":"mdnaimislam405@gmail.com"},"preview":{}},"type":"DEPLOY","releaseTime":"2021-03-21T16:36:05.468962687Z","releaseUser":{"email":"mdnaimislam405@gmail.com"}}
+[info] +  hosting[my-work-firebase]: release complete 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/my-work-firebase/overview
+[info] Hosting URL: https://my-work-firebase.web.app
