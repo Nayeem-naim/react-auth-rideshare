@@ -66,7 +66,7 @@ const LogIn = () => {
                 .then(res => {
                     const { email, password } = res.user;
                     const signInUser = { email, password }
-                    const newUserInfo = { ...user }
+                    const newUserInfo = { ...res.user }
                     newUserInfo.error = '';
                     newUserInfo.success = true;
                     setUser(newUserInfo)
