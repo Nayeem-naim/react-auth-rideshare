@@ -70,7 +70,7 @@ const LogIn = () => {
                     newUserInfo.error = '';
                     newUserInfo.success = true;
                     setUser(newUserInfo)
-                    setLoggedInUser(signInUser)
+                    setLoggedInUser(newUserInfo)
                     history.replace(from);
                 })
                 .catch(error => {
